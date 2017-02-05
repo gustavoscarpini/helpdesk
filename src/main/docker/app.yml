@@ -1,0 +1,16 @@
+version: '2'
+services:
+    helpdesk-app:
+        image: helpdesk
+        external_links:
+            - helpdesk-postgresql:postgresql
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://postgresql:5432/helpdesk
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+        ports:
+            - 8080:8080
+    helpdesk-postgresql:
+        extends:
+            file: postgresql.yml
+            service: helpdesk-postgresql

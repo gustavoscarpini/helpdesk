@@ -1,0 +1,27 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "maxlength"
+            ],
+            "fieldValidateRulesMinlength": "2",
+            "fieldValidateRulesMaxlength": "100"
+        },
+        {
+            "fieldName": "estado",
+            "fieldType": "UF",
+            "fieldValues": "AC,PR,SP,SC"
+        }
+    ],
+    "changelogDate": "20170204164905",
+    "dto": "no",
+    "service": "serviceClass",
+    "entityTableName": "cidade",
+    "pagination": "pagination"
+}

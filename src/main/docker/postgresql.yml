@@ -1,0 +1,12 @@
+version: '2'
+services:
+    helpdesk-postgresql:
+        container_name: helpdesk-postgresql
+        image: postgres:9.5.4
+        # volumes:
+        #     - ~/volumes/jhipster/helpdesk/postgresql/:/var/lib/postgresql/
+        environment:
+            - POSTGRES_USER=helpdesk
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432
